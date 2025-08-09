@@ -1,0 +1,42 @@
+.container {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.overlayImage {
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.highlight {
+  position: absolute;
+  border: 2px solid var(--error-color);
+  background: rgba(255, 0, 0, 0.1);
+  pointer-events: none;
+  transform-origin: top left;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

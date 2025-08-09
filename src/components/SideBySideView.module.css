@@ -1,0 +1,36 @@
+.container {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.sideBySide {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  padding: 24px 16px;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.highlight {
+  position: absolute;
+  border: 2px solid var(--error-color);
+  background: rgba(255, 0, 0, 0.1);
+  pointer-events: none;
+  transform-origin: top left;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

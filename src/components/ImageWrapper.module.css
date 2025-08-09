@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  gap: 8px;
+}
+
+.imageLabel {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: white;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform var(--transition);
+}

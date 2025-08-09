@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: var(--font-size-lg);
+}
+
+.switchRoot {
+  width: 36px;
+  height: 20px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  position: relative;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.switchRoot[data-state="checked"] {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.switchThumb {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition);
+  transform: translateX(2px);
+  will-change: transform;
+}
+
+.switchThumb[data-state="checked"] {
+  transform: translateX(18px);
+}
