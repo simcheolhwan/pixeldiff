@@ -1,0 +1,131 @@
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.toggleGroup {
+  display: flex;
+  background: var(--bg-secondary);
+  padding: 2px;
+  border-radius: var(--radius-md);
+  gap: 2px;
+}
+
+.toggleItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.toggleItem:hover {
+  color: var(--text-primary);
+}
+
+.toggleItem[data-pressed] {
+  background: var(--bg-primary);
+  color: var(--accent-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.toggleItem svg {
+  flex-shrink: 0;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.sliderLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.sliderRoot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+}
+
+.sliderControl {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sliderTrack {
+  position: relative;
+  background: var(--bg-hover);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  height: 4px;
+}
+
+.sliderIndicator {
+  background: var(--accent-color);
+  border-radius: var(--radius-sm);
+  height: 100%;
+}
+
+.sliderThumb {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.sliderThumb:hover {
+  box-shadow: var(--focus-ring-hover);
+}
+
+.sliderThumb:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.clearButton {
+  padding: 6px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.clearButton:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.clearButton:active {
+  transform: translateY(1px);
+}

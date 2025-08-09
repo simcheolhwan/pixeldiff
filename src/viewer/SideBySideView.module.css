@@ -1,0 +1,42 @@
+.container {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.sideBySide {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  padding: 24px 16px;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.sideBySide.vertical {
+  flex-direction: column;
+}
+
+.fileName {
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  word-break: break-all;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-sm);
+}
